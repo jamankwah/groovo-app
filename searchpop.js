@@ -1,14 +1,14 @@
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
-    FlatList,
-    Image,
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
+  FlatList,
+  Image,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 
 const initialRecentSearches = [
@@ -44,7 +44,7 @@ export default function SearchPopScreen() {
   const [recentSearches, setRecentSearches] = useState(initialRecentSearches);
   const [searchText, setSearchText] = useState('');
 
-  const handleRemoveSearch = (id: string) => {
+  const handleRemoveSearch = (id) => {
     setRecentSearches(prev => prev.filter(item => item.id !== id));
   };
 
@@ -52,7 +52,7 @@ export default function SearchPopScreen() {
     setRecentSearches([]);
   };
 
-  const renderSearchItem = ({ item }: { item: (typeof initialRecentSearches)[0] }) => (
+  const renderSearchItem = ({ item }) => (
     <View style={styles.searchItem}>
       <Image source={{ uri: item.image }} style={styles.itemImage} />
       <View style={styles.itemDetails}>
