@@ -55,3 +55,5 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 });
+Rename GenreSelectionScreen.tsx to GenreSelectionScreen.js
+
